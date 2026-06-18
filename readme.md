@@ -1,61 +1,46 @@
-## Memulai
+# 📚 Perpustakaan - Backend API
+
+Backend API untuk aplikasi perpustakaan sederhana menggunakan Node.js, Express, dan MySQL.
+
+## 🚀 Fitur
+
+- ✅ Authentication (Login/Register) dengan JWT
+- ✅ Role-based access control (Admin/Siswa)
+- ✅ CRUD Manajemen Buku
+- ✅ Favorit Buku
+- ✅ Komentar & Rating
+- ✅ Upload Cover Buku
+- ✅ Search & Filter Buku
+- ✅ Dashboard Statistics
+- ✅ User Management (Admin)
+
+## 🛠️ Teknologi
+
+- **Node.js** - Runtime JavaScript
+- **Express.js** - Web Framework
+- **MySQL** - Database
+- **JWT** - Authentication
+- **Bcrypt** - Password Hashing
+- **Multer** - File Upload
+- **Nodemon** - Development
+
+## 📦 Instalasi
 
 ```bash
-$ git clone https://github.com/alitade/yadika-pplg-xi-be.git [kls-tim-project]
-$ rm -rf .git
-$
-$ git init
-$ git add . 
-$ git commit -m "first commit"
-$ git branch -M main
-$ git remote add origin [ssh / http repo]
-$ git push -u origin main
-```
+# Clone repository
+git clone https://github.com/username/perpustakaan-be.git
+cd perpustakaan-be
 
-1. copy file .env.example > .env dan isi paramater di .env
-```Bash
-$ cp .env.example .env
-$ nano .env
-```
+# Install dependencies
+npm install
 
-2. install library node
-```bash
-$ npm install  
-```
-3. Migrate & seeder table 
+# Setup database
+# 1. Import perpustakaan.sql ke MySQL
+# 2. Copy .env.example ke .env
+# 3. Sesuaikan konfigurasi database
 
-```bash
-$ npx knex migrate:latest
-$ npx knex seed:run
-```
-----
-### Membuat migrate & seeder
-```bash
-$ npx knex migrate:make [nama file migrate]
-$ npx knex seed:make [nama file seeder]
-```
+# Jalankan development server
+npm run dev
 
-### Menampilkan command-command knex
-```bash
-$ npx knex help
-```
-### Aturan GIT
-* pull branch develop
-* buat branch dengan nama / code task masing - masing dev, branch parent diambil dari develop
-* lakukan commit setiap selesai mengerjakan task (beres / tidak beres)
-* format message commit :
-  * feat : [onprogress / done] nama fitur (untuk fitur yang baru dibuat)
-  * fix : [onprogress / done] nama fitur (untuk perbaikan fitur yang sudah ada)
-    ```bash
-    $ git commit -m "feat: [Onprogress] kelola data siswa" -m "tambah data, hapus data"
-    $ git commit -m "feat: [done] kelola data siswa" -m "tambah data, hapus data"
-    ```
-* push ke branch task masing-masing
-* setiap memulai pengerjaan task, harus selalu `pull` code dari branch develop
-
-  contoh : anggap branch `task-001` adalah branch yang aktif
-  ```bash
-  (task-001) $ git pull origin develop
-  ```
-
-  test merge
+# Jalankan production server
+npm start
